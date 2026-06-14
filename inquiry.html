@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inquiry & Contact - RoboSTEMHub</title>
+    <style>
+        :root { --primary: #0056b3; --secondary: #ff8c00; --dark: #333; }
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f6f9; }
+        header { background-color: var(--primary); padding: 15px; }
+        nav { display: flex; justify-content: center; flex-wrap: wrap; gap: 15px; }
+        nav a { color: white; text-decoration: none; font-weight: bold; padding: 8px 15px; }
+        .container { padding: 40px 20px; max-width: 700px; margin: auto; background: white; margin-top: 30px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); border-radius: 8px; }
+        h1 { color: var(--primary); text-align: center; margin-top: 0; }
+        .form-group { margin-bottom: 20px; }
+        label { display: block; margin-bottom: 8px; font-weight: bold; color: #444; }
+        input[type="text"], input[type="email"], select, textarea { width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; font-size: 1rem; }
+        textarea { resize: vertical; }
+        .submit-btn { background-color: var(--secondary); color: white; border: none; padding: 12px 20px; font-size: 1.1rem; border-radius: 5px; cursor: pointer; width: 100%; font-weight: bold; }
+        .submit-btn:hover { background-color: #e07b00; }
+        footer { background-color: var(--dark); color: white; text-align: center; padding: 20px; margin-top: 40px; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="learning.html">Arduino Robotics</a>
+            <a href="modules.html">Modules</a>
+            <a href="products.html">Kits & Products</a>
+            <a href="testimonials.html">Testimonials</a>
+            <a href="utem.html">UTeM STEM</a>
+            <a href="gallery.html">Gallery</a>
+            <a href="inquiry.html">Contact & Inquiry</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h1>Hubungi Kami & Borang Pertanyaan</h1>
+        <p style="text-align: center; color: #666;">Isi borang di bawah untuk permohonan sebut harga bundle kit, tempahan slot bengkel sekolah, atau khidmat rundingan latihan.</p>
+
+        <form action="#" method="POST" onsubmit="alert('Terima kasih! Pertanyaan anda telah berjaya dihantar.'); return false;">
+            <div class="form-group">
+                <label for="name">Nama Penuh / Nama Organisasi:</label>
+                <input type="text" id="name" name="name" required placeholder="Contoh: Sekolah Menengah Kebangsaan ABC / Ali bin Ahmad">
+            </div>
+
+            <div class="form-group">
+                <label for="email">Alamat Emel:</label>
+                <input type="email" id="email" name="email" required placeholder="contoh@email.com">
+            </div>
+
+            <div class="form-group">
+                <label for="category">Jenis Pertanyaan:</label>
+                <select id="category" name="category">
+                    <option value="workshop">Tempahan Bengkel / Latihan STEM</option>
+                    <option value="kit">Pembelian Bundle Kit (Pukal/Individu)</option>
+                    <option value="collaboration">Kolaborasi Outreach / UTeM Connection</option>
+                    <option value="other">Lain-lain Am</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Mesej / Butiran Lanjut:</label>
+                <textarea id="message" name="message" rows="5" required placeholder="Sila nyatakan bilangan kit atau tarikh cadangan bengkel..."></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn">Hantar Pertanyaan</button>
+        </form>
+    </main>
+
+    <footer style="margin-top: 60px;">
+        <p>&copy; 2026 RoboSTEMHub.com</p>
+    </footer>
+
+</body>
+</html>
